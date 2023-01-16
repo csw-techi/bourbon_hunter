@@ -9,6 +9,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
     html = URI.open("#{url}").read
     nokogiri_doc = Nokogiri::HTML(html)
     final_array = []
+    puts "In Stock Now at Buffalo Trace Distillery"
 
     nokogiri_doc.search(AVAILABLE_PRODUCT_CSS_SELECTOR).each do |element|
       element = element.search('.cmp-title h3').text
