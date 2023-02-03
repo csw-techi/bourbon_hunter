@@ -26,15 +26,17 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
         end
           account_sid = ENV['ACCOUNT_SID']
           auth_token = ENV['AUTH_TOKEN']
+          twilio_number = ENV['TWILIO_NUMBER']
+          to_numbers = ENV['TO_NUMBERS']
 
           @client = Twilio::REST::Client.new(account_sid, auth_token)
     
           message = @client.messages
             .create(
               body: list.join("\n"),
-              from: '(855)917-5205',
+              from: twilio_number,
               media_url: ['https://www.buffalotracedistillery.com/visit-us/tasting-and-purchasing/product-availability/_jcr_content/root/container/container_62029901/image.coreimg.100.900.jpeg/1631722971487/gift-shop-spirits-39.jpeg'],
-              to: '+15028190532'
+              to: to_numbers
             )
           
           #puts message.sid
