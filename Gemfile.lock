@@ -37,7 +37,6 @@ DEPENDENCIES
   date
   nokogiri
   open-uri
-  racc
   twilio-ruby
 
 BUNDLED WITH

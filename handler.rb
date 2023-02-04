@@ -1,8 +1,8 @@
 load "vendor/bundle/bundler/setup.rb"
 
+require 'rubygems'
 require 'open-uri'
 require 'nokogiri'
-require 'rubygems'
 require 'twilio-ruby'
 require 'date'
 
@@ -32,7 +32,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
           to_numbers = ENV['TO_NUMBERS']
 
           @client = Twilio::REST::Client.new(account_sid, auth_token)
-    
+
           message = @client.messages
             .create(
               body: list.join("\n"),
@@ -40,7 +40,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
               media_url: ['https://www.buffalotracedistillery.com/visit-us/tasting-and-purchasing/product-availability/_jcr_content/root/container/container_62029901/image.coreimg.100.900.jpeg/1631722971487/gift-shop-spirits-39.jpeg'],
               to: to_numbers
             )
-          
+
           #puts message.sid
         puts list
     end
