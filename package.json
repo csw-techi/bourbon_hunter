@@ -1,0 +1,19 @@
+{
+  "name": "bourbon_hunter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csw-techi/bourbon_hunter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csw-techi/bourbon_hunter/issues"
+  },
+  "homepage": "https://github.com/csw-techi/bourbon_hunter#readme"
+}

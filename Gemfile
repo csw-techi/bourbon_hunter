@@ -3,4 +3,7 @@
 source "https://rubygems.org"
 
 gem "nokogiri"
-gem "pry"
+gem "twilio-ruby"
+gem "racc"
+gem 'open-uri'
+gem 'date'

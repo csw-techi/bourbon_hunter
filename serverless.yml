@@ -1,0 +1,30 @@
+service: bourbon-hunter
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: ruby2.7
+  region: us-east-1
+  deploymentBucket:
+    name: bourbon-hunter
+    serverSideEncryption: AES256
+  deploymentPrefix: serverless
+  versionFunctions: false
+
+package: 
+  artifact: bourbon_hunter_deploy.zip
+
+functions:
+  bourbon_hunter:
+    handler: handler.site_scraper
+    description: Scrapes bourbon site for in stock items
+    events:
+      - schedule: cron(0 14 * * ? *)
+    environment:
+      ACCOUNT_SID: ${env:ACCOUNT_SID, 'Twilio account SID here'}
+      AUTH_TOKEN: ${env:AUTH_TOKEN, 'Twilio token here'}
+      TWILIO_NUMBER: ${env:TWILIO_NUMBER, 'Twilio phone number here'}
+      TO_NUMBERS: ${env:TO_NUMBERS, 'To phone numbers here seperated by commas'}
+
+plugins:
+  -serverless-ruby-package
