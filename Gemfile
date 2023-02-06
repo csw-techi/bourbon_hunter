@@ -4,5 +4,7 @@ source "https://rubygems.org"
 
 gem "nokogiri"
 gem "twilio-ruby"
-gem 'open-uri'
-gem 'date'
+
+group :local do 
+ gem 'pry'
+end
