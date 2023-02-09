@@ -4,6 +4,8 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: ruby2.7
+  memorySize: 128
+  timeout: 800
   region: us-east-1
   deploymentBucket:
     name: bourbon-hunter
@@ -12,7 +14,7 @@ provider:
   versionFunctions: false
 
 package: 
-  artifact: bourbon_hunter_deploy.zip
+  artifact: bourbon-hunter-deploy.zip
 
 functions:
   bourbon_hunter:
@@ -25,6 +27,3 @@ functions:
       AUTH_TOKEN: ${env:AUTH_TOKEN, 'Twilio token here'}
       TWILIO_NUMBER: ${env:TWILIO_NUMBER, 'Twilio phone number here'}
       TO_NUMBERS: ${env:TO_NUMBERS, 'To phone numbers here seperated by commas'}
-
-plugins:
-  -serverless-ruby-package

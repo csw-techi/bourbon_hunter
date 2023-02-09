@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/csw-techi/bourbon_hunter/issues"
   },
-  "homepage": "https://github.com/csw-techi/bourbon_hunter#readme"
+  "homepage": "https://github.com/csw-techi/bourbon_hunter#readme",
+  "devDependencies": {
+    "serverless-ruby-package": "^1.4.0"
+  }
 }

@@ -1,16 +1,16 @@
 load "vendor/bundle/bundler/setup.rb"
 
-require 'open-uri'
-require 'nokogiri'
 require 'rubygems'
+require 'nokogiri'
 require 'twilio-ruby'
+require 'open-uri'
 require 'date'
 
 # We only care about available products
 AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.container--product-availability-available.aem-GridColumn--offset--tablet--0.aem-GridColumn--default--none.aem-GridColumn--phone--none.aem-GridColumn--phone--12.aem-GridColumn--tablet--none.aem-GridColumn.aem-GridColumn--tablet--6.aem-GridColumn--offset--phone--0.aem-GridColumn--offset--default--0.aem-GridColumn--default--4'
 
-  def site_scraper(url)
-    html = URI.open("#{url}").read
+  def site_scraper(event:, context:)
+    html = URI.open('https://www.buffalotracedistillery.com/product-availability').read
     nokogiri_doc = Nokogiri::HTML(html)
     final_array = []
     d = DateTime.now
@@ -44,5 +44,3 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
           #puts message.sid
         puts list
     end
-
-site_scraper('https://www.buffalotracedistillery.com/product-availability')

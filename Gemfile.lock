@@ -8,10 +8,10 @@ GEM
     faraday-net_http (3.0.2)
     jwt (2.6.0)
     mini_portile2 (2.8.1)
-    nokogiri (1.13.10)
+    nokogiri (1.14.1)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-darwin)
+    nokogiri (1.14.1-x86_64-linux)
       racc (~> 1.4)
     open-uri (0.3.0)
       stringio
@@ -30,8 +30,7 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-21
-  x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   date
@@ -41,4 +40,4 @@ DEPENDENCIES
   twilio-ruby
 
 BUNDLED WITH
-   2.3.26
+   2.4.6
