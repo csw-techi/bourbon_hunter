@@ -37,10 +37,11 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
             .create(
               body: list.join("\n"),
               from: twilio_number,
-              media_url: ['https://www.buffalotracedistillery.com/visit-us/tasting-and-purchasing/product-availability/_jcr_content/root/container/container_62029901/image.coreimg.100.900.jpeg/1631722971487/gift-shop-spirits-39.jpeg'],
+              # Use medial url to send as MMS
+              # media_url: ['https://www.buffalotracedistillery.com/visit-us/tasting-and-purchasing/product-availability/_jcr_content/root/container/container_62029901/image.coreimg.100.900.jpeg/1631722971487/gift-shop-spirits-39.jpeg'],
               to: to_numbers
             )
           
-          #puts message.sid
         puts list
+        puts message.sid
     end
