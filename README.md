@@ -2,12 +2,13 @@
 
 ## Install / Setup
 
-0. Clone bourbon_hunter repo https://github.com/csw-techi/bourbon_hunter
-1. Install Docker https://docs.docker.com/get-docker/
-2. Install serverless framework https://www.serverless.com/framework/docs/getting-started
-3. Create Twilio Account https://www.twilio.com/try-twilio
-3. Run 'npm install'
-4. Run 'bundle install --standalone --path vendor/bundle'
+1. Clone bourbon_hunter repo https://github.com/csw-techi/bourbon_hunter
+2. Install Docker https://docs.docker.com/get-docker/
+3. Install serverless framework https://www.serverless.com/framework/docs/getting-started
+4. Create Twilio Account https://www.twilio.com/try-twilio
+5. Authenticate to your AWS account https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html
+6. Run 'npm install'
+7. Run 'bundle install --standalone --path vendor/bundle'
     <!--Maybe just 'bundle install' ??  -->
 
 
