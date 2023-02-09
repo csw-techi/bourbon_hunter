@@ -8,7 +8,7 @@ provider:
   timeout: 800
   region: us-east-1
   deploymentBucket:
-    name: bourbon-hunter
+    name: ${env:BUCKET_NAME}
     serverSideEncryption: AES256
   deploymentPrefix: serverless
   versionFunctions: false
