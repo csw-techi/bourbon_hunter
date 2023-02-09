@@ -40,4 +40,5 @@
     serverless deploy --stage prd
 
 ## Other Links
-    https://blog.pardner.com/2021/03/the-quickest-easiest-way-to-develop-aws-lambda-functions-that-use-ruby-gems/ 
+
+    - [The quickest & easiest way to develop AWS Lambda functions that use Ruby gems](https://blog.pardner.com/2021/03/the-quickest-easiest-way-to-develop-aws-lambda-functions-that-use-ruby-gems/)
