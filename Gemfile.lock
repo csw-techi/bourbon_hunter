@@ -33,7 +33,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  date
   nokogiri
   open-uri
   racc
