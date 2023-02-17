@@ -27,7 +27,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
           account_sid = ENV['ACCOUNT_SID']
           auth_token = ENV['AUTH_TOKEN']
           twilio_number = ENV['TWILIO_NUMBER']
-          numbers_to_message = ['5028190532']
+          numbers_to_message = ['<phone number here>', '<phone number here>']
 
           @client = Twilio::REST::Client.new(account_sid, auth_token)
           
