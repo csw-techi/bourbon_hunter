@@ -9,9 +9,8 @@
 5. Configure AWS CLI https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 6. Run 'npm install'
 7. Run 'bundle install --standalone --path vendor/bundle'
-    <!--Maybe just 'bundle install' ??  -->
-
-
+8. Add 'numbers_to_message' to handler.rb
+   
 ## Invoking Locally
 
     docker build -t awsruby27 .
@@ -19,12 +18,10 @@
     docker run --rm -it -v $PWD:/var/task -w /var/task awsruby27
     
     bundle install --path vendor/bundle --clean
-    
-    export BUCKET_NAME=<AWS S3 bucket name here>
+
     export ACCOUNT_SID=<Twilio SID here>
     export AUTH_TOKEN=<Twilio auth tokern here>
     export TWILIO_NUMBER=<Twilio number here>
-    export TO_NUMBERS=<Destination SMS numbers here seperated by commas>
 
     ruby -e "require 'handler'; puts site_scraper(event: nil, context: nil)"
 
@@ -34,7 +31,6 @@
     export ACCOUNT_SID=<Twilio SID here>
     export AUTH_TOKEN=<Twilio auth tokern here>
     export TWILIO_NUMBER=<Twilio number here>
-    export TO_NUMBERS=<Destination SMS numbers here seperated by commas>
 
     rm -f deploy.zip ; zip -q -r bourbon-hunter-deploy.zip .
 

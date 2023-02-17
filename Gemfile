@@ -4,6 +4,4 @@ source "https://rubygems.org"
 
 gem "nokogiri"
 gem "twilio-ruby"
-gem "racc"
 gem 'open-uri'
-gem 'date'
