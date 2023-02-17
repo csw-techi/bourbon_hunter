@@ -8,8 +8,8 @@
 4. Create Twilio Account https://www.twilio.com/try-twilio
 5. Configure AWS CLI https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 6. Run 'npm install'
-7. Run 'bundle install --standalone --path vendor/bundle'  <!-- Maybe just 'bundle install' -->
-8. Add phone numbers to handler.rb e.g. numbers_to_message = ['5025551234', '8125551234']
+7. Run 'bundle install --standalone --path vendor/bundle'
+8. Add 'numbers_to_message' to handler.rb
    
 ## Invoking Locally
 
@@ -19,7 +19,6 @@
     
     bundle install --path vendor/bundle --clean
 
-    export BUCKET_NAME=<AWS S3 bucket name here>
     export ACCOUNT_SID=<Twilio SID here>
     export AUTH_TOKEN=<Twilio auth tokern here>
     export TWILIO_NUMBER=<Twilio number here>

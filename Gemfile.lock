@@ -35,7 +35,6 @@ PLATFORMS
 DEPENDENCIES
   nokogiri
   open-uri
-  racc
   twilio-ruby
 
 BUNDLED WITH
