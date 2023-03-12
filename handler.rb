@@ -22,6 +22,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
         list << output
         end
           bt_url = 'Reply STOP to unsubscribe https://www.buffalotracedistillery.com/product-availability'
+
           list << bt_url
           
           account_sid = ENV['ACCOUNT_SID']
