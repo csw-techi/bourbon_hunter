@@ -21,7 +21,7 @@ functions:
     handler: handler.site_scraper
     description: Scrapes bourbon site for in stock items and sends results via SMS
     events:
-      - schedule: cron(0 14 * * ? *)
+      - schedule: cron(05 14 * * ? *)
     environment:
       ACCOUNT_SID: ${env:ACCOUNT_SID, 'Twilio account SID here'}
       AUTH_TOKEN: ${env:AUTH_TOKEN, 'Twilio token here'}
