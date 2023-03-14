@@ -30,7 +30,6 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
           twilio_number = ENV['TWILIO_NUMBER']
           numbers_to_message = ['<phone number here>','<phone number here>']
 
-
           @client = Twilio::REST::Client.new(account_sid, auth_token)
           
           numbers_to_message.each do |number|
