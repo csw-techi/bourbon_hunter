@@ -10,7 +10,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
     nokogiri_doc = Nokogiri::HTML(html)
     final_array = []
 
-    list = ['🥃 Hello from Bourbon Hunter!']
+      list = ['🥃 Hello from Bourbon Hunter!','Available today at Buffalo Trace']
 
     nokogiri_doc.search(AVAILABLE_PRODUCT_CSS_SELECTOR).each do |element|
       element = element.search('.cmp-title h3').text
@@ -29,6 +29,7 @@ AVAILABLE_PRODUCT_CSS_SELECTOR = '.container.section.container--justify-center.c
           auth_token = ENV['AUTH_TOKEN']
           twilio_number = ENV['TWILIO_NUMBER']
           numbers_to_message = ['<phone number here>','<phone number here>']
+
 
           @client = Twilio::REST::Client.new(account_sid, auth_token)
           
