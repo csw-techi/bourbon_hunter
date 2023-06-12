@@ -18,10 +18,16 @@ package:
 
 functions:
   bourbon_hunter:
-    handler: handler.site_scraper
+    handler: handler_dev.site_scraper
     description: Scrapes bourbon site for in stock items and sends results via SMS
     events:
-      - schedule: cron(05 13 * * ? *)
+      - schedule:
+          rate:
+            - cron(10 13 ? * MON-SAT *)
+            - cron(10 15 ? * SUN *)
+          input:
+            key1: value1
+            key2: value2
     environment:
       ACCOUNT_SID: ${env:ACCOUNT_SID, 'Twilio account SID here'}
       AUTH_TOKEN: ${env:AUTH_TOKEN, 'Twilio token here'}
