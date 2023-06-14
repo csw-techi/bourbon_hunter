@@ -18,7 +18,7 @@ package:
 
 functions:
   bourbon_hunter:
-    handler: handler_dev.site_scraper
+    handler: handler.site_scraper
     description: Scrapes bourbon site for in stock items and sends results via SMS
     events:
       - schedule:
